@@ -3,18 +3,21 @@ package main
 import "fmt"
 
 func main() {
-	i:=1
-	e:=  2.71828;
-	var limite int;
-	result:=e;
-	fmt.Print("calcular e^x \n")
-	fmt.Printf("Ingrese limite (numero entero): ")
-	fmt.Scan(&limite);
-	for i < limite{
-		result = result * e; 
-		i++
+	var n float64
+	var j float64
+	var i float64
+	var fact float64//factorial
+	var e float64
 
+	e=1; // se inicia con 1 para tomar en cuenta el  0!
+	fmt.Scan(&n)
+	//e=0; //rep factorial 0
+	for j = n; j > 0; j-- {
+		fact = 1 
+		for i = 1; i <= j;i++ {
+			fact = fact * i;		
+		}
+		e = e + 1.0/fact;
 	}
-	fmt.Printf("respuesta %f", result);
-
+	fmt.Println(e)
 }
